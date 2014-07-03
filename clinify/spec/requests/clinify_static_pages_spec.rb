@@ -1,60 +1,38 @@
 require 'spec_helper'
 
-describe "ClinifyStaticPages" do
+describe "Clinify static pages" do
+
+  subject { page }
+
   describe "Home page" do
+    before { visit root_path }
 
-    it "should have the content 'Kefisio'" do
-      visit '/clinify_static_pages/home'
-      expect(page).to have_content('Kefisio')
-    end
-
-    it "should have the title 'Home'" do
-      visit '/clinify_static_pages/home'
-      expect(page).to have_title("Kefisio")
-    end
-
-    it "should not have a custom page title" do
-      visit '/clinify_static_pages/home'
-      expect(page).not_to have_title('| Home')
-    end
+    it { should have_content('Kefisio') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title('| Home') }
   end
+  
 
-  describe "Help page" do
+   describe "Help page" do
+    before { visit help_path }
 
-    it "should have the content 'Ajuda'" do
-      visit '/clinify_static_pages/help'
-      expect(page).to have_content('Ajuda')
-    end
-
-    it "should have the title 'Ajuda'" do
-      visit '/clinify_static_pages/help'
-      expect(page).to have_title("Kefisio | Ajuda")
-    end
+    it { should have_content('Ajuda') }
+    it { should have_title(full_title('Ajuda')) }
   end
+  
 
   describe "About page" do
+    before { visit about_path }
 
-    it "should have the content 'Sobre nós'" do
-      visit '/clinify_static_pages/about'
-      expect(page).to have_content('Sobre nós')
-    end
-
-    it "should have the title 'Sobre nós'" do
-      visit '/clinify_static_pages/about'
-      expect(page).to have_title("Kefisio | Sobre nós")
-    end
+    it { should have_content('Sobre nós') }
+    it { should have_title(full_title('Sobre nós')) }
   end
 
   describe "Login page" do
+    before { visit login_path }
 
-    it "should have the content 'Login'" do
-      visit '/clinify_static_pages/login'
-      expect(page).to have_content('Login')
-    end
-
-    it "should have the title 'Login'" do
-      visit '/clinify_static_pages/login'
-      expect(page).to have_title("Kefisio | Login")
-    end
-  end
+    it { should have_content('Login') }
+    it { should have_title(full_title('Login')) }
+   end
 end
+
