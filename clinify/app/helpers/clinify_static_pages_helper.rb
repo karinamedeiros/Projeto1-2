@@ -1,0 +1,2 @@
+module ClinifyStaticPagesHelper
+end
