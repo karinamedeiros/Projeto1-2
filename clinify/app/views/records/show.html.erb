@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Paciente</strong>
+  <%= @record.user_id %>
+</p>
+
+<p>
+  <strong>Sintomas</strong>
+  <%= @record.symptom %>
+</p>
+
+<p>
+  <strong>Exames</strong>
+  <%= @record.exams %>
+</p>
+
+<p>
+  <strong>Pressão arterial</strong>
+  <%= @record.bloodPress %>
+</p>
+
+<p>
+  <strong>Batimentos cardíacos</strong>
+  <%= @record.heartBeat %>
+</p>
+
+<p>
+  <strong>Histórico pessoal</strong>
+  <%= @record.history %>
+</p>
+
+<p>
+  <strong>Observação</strong>
+  <%= @record.observation %>
+</p>
+
+
+<%= link_to 'Editar', edit_record_path(@record) %> |
+<%= link_to 'Voltar', records_path %>
