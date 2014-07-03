@@ -10,7 +10,12 @@ describe "ClinifyStaticPages" do
 
     it "should have the title 'Home'" do
       visit '/clinify_static_pages/home'
-      expect(page).to have_title("Kefisio | Home")
+      expect(page).to have_title("Kefisio")
+    end
+
+    it "should not have a custom page title" do
+      visit '/clinify_static_pages/home'
+      expect(page).not_to have_title('| Home')
     end
   end
 
