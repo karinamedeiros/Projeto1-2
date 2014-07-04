@@ -1,4 +1,6 @@
 Clinify::Application.routes.draw do
+  get "pacient/new"
+  get "users/new"
   root  'clinify_static_pages#home'
   match '/help',    to: 'clinify_static_pages#help',    via: 'get'
   match '/about',   to: 'clinify_static_pages#about',   via: 'get'
