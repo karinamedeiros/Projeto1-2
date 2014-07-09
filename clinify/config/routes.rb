@@ -5,9 +5,13 @@ Clinify::Application.routes.draw do
   match '/help',    to: 'clinify_static_pages#help',    via: 'get'
   match '/about',   to: 'clinify_static_pages#about',   via: 'get'
   match '/login',   to: 'clinify_static_pages#login', via: 'get'
+  match '/register',   to: 'clinify_static_pages#register', via: 'get'
+
   resources :records
 
   resources :users
+
+  resources :pacient
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
