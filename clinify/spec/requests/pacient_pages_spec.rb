@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-describe "Pacients pages" do
+describe "Patients pages" do
 
   subject { page }
 
   describe "register page" do
-    let(:pacient) { FactoryGirl.create(:pacient) }
-    before { visit pacient_path(pacient) }
+    let(:patient) { FactoryGirl.create(:patient) }
+    before { visit patient_path(patient) }
 
-    it { should have_content(pacient.name) }
-    it { should have_title(pacient.name) }
+    it { should have_content(patient.name) }
+    it { should have_title(patient.name) }
   end
 
   describe "Register" do
@@ -23,11 +23,11 @@ describe "Pacients pages" do
 
     before { visit register_path }
 
-    let(:submit) { "Registrar paciente" }
+    let(:submit) { "Registrar patiente" }
 
     describe "with invalid information" do
       it "should not create a user" do
-        expect { click_button submit }.not_to change(Pacient, :count)
+        expect { click_button submit }.not_to change(Patient, :count)
       end
     end
 
@@ -40,7 +40,7 @@ describe "Pacients pages" do
       end
 
       it "should create a user" do
-        expect { click_button submit }.to change(Pacient, :count).by(1)
+        expect { click_button submit }.to change(Patient, :count).by(1)
       end
     end
   end

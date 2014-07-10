@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :pacient do
+  factory :patient do
     name     "Karina"
     email    "karina.medeiros@gmail.com"
     password "123456"

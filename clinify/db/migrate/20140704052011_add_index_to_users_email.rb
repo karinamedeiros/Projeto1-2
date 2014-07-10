@@ -1,5 +1,5 @@
 class AddIndexToUsersEmail < ActiveRecord::Migration
   def change
-    add_index :pacients, :email, unique: true
+    add_index :patients, :email, unique: true
   end
 end

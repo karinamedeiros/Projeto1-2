@@ -1,5 +1,5 @@
 Clinify::Application.routes.draw do
-  get "pacient/new"
+  get "patient/new"
   get "users/new"
   root  'clinify_static_pages#home'
   match '/help',    to: 'clinify_static_pages#help',    via: 'get'
@@ -11,7 +11,7 @@ Clinify::Application.routes.draw do
 
   resources :users
 
-  resources :pacient
+  resources :patient
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
