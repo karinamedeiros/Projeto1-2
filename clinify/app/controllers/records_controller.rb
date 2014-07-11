@@ -28,7 +28,7 @@ class RecordsController < ApplicationController
 
     respond_to do |format|
       if @record.save
-        format.html { redirect_to @record, notice: 'Record was successfully created.' }
+        format.html { redirect_to @record, notice: 'Ficha criada com sucesso.' }
         format.json { render action: 'show', status: :created, location: @record }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class RecordsController < ApplicationController
   def update
     respond_to do |format|
       if @record.update(record_params)
-        format.html { redirect_to @record, notice: 'Record was successfully updated.' }
+        format.html { redirect_to @record, notice: 'Ficha atualizada com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

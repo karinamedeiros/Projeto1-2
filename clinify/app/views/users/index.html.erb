@@ -1,4 +1,4 @@
-<h1>Patientes</h1>
+<h1>Pacientes</h1>
 
 <table>
   <thead>
@@ -8,9 +8,6 @@
       <th>Telefone residencial</th>
       <th>Telefone celular</th>
       <th>Endereço</th>
-      <th>Email</th>
-      <th>Login</th>
-      <th>Senha</th>
       <th></th>
       <th></th>
       <th></th>
@@ -26,8 +23,6 @@
         <td><%= user.phoneMobile %></td>
         <td><%= user.address %></td>
         <td><%= user.email %></td>
-        <td><%= user.login %></td>
-        <td><%= user.password %></td>
         <td><%= link_to 'Mostrar', user %></td>
         <td><%= link_to 'Editar', edit_user_path(user) %></td>
         <td><%= link_to 'Excluir', user, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
@@ -38,4 +33,4 @@
 
 <br>
 
-<%= link_to 'Novo patiente', new_user_path %>
+<%= link_to 'Novo paciente', new_user_path %>
