@@ -22,6 +22,7 @@ group :test do
 end
 
 gem 'carrierwave', '~> 0.9'
+gem "rmagick", "~> 2.13.1"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

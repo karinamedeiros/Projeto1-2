@@ -1,14 +1,4 @@
 <h1>Nova ficha</h1>
 
 <%= render 'form' %>
-<div class="well">
-  <%= form_for @records, html: { multipart: true } do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :exams %>
-    <%= f.file_field :exams %>
-    <%= f.submit "Salvar", class: "btn btn-primary" %>
-  <% end %>
-</div>
-
 <%= link_to 'Voltar', records_path %>

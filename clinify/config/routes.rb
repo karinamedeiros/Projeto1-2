@@ -7,7 +7,7 @@ Clinify::Application.routes.draw do
   match '/about',   to: 'clinify_static_pages#about',   via: 'get'
   match '/login',   to: 'clinify_static_pages#login', via: 'get'
 
-  resources :records, only: [:index, :new, :create, :destroy]
+  resources :records
 
   resources :users
 
