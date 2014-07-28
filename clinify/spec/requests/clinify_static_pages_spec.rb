@@ -28,13 +28,6 @@ describe "Clinify static pages" do
     it { should have_title(full_title('Sobre nós')) }
   end
 
-
-    describe "Register page" do
-    before { visit register_path }
-
-    it { should have_content('Registrar') }
-    it { should have_title(full_title('Registrar')) }
-   end
    
   describe "Login page" do
     before { visit login_path }

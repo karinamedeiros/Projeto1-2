@@ -11,35 +11,45 @@
     </div>
   <% end %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-  
-
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
     <%= f.label :cpf %><br>
     <%= f.text_field :cpf %>
   </div>
+
   <div class="field">
     <%= f.label :phoneHome %><br>
     <%= f.text_field :phoneHome %>
   </div>
+
   <div class="field">
     <%= f.label :phoneMobile %><br>
     <%= f.text_field :phoneMobile %>
   </div>
-  <div class="field">
+
+ <div class="field">
     <%= f.label :address %><br>
     <%= f.text_field :address %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, :autofocus => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
   </div>
   
   <div class="actions">

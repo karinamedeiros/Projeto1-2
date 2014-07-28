@@ -1,7 +1,9 @@
 Clinify::Application.routes.draw do
+  
   devise_for :users
 
-  get "users/new"
+  devise_for :records
+
   root  'clinify_static_pages#home'
   match '/help',    to: 'clinify_static_pages#help',    via: 'get'
   match '/about',   to: 'clinify_static_pages#about',   via: 'get'

@@ -23,7 +23,7 @@ describe "Patients pages" do
 
     before { visit register_path }
 
-    let(:submit) { "Registrar patiente" }
+    let(:submit) { "Registrar paciente" }
 
     describe "with invalid information" do
       it "should not create a user" do
