@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Patiente</th>
+      <th>Paciente</th>
       <th>Sintomas</th>
       <th>Exames</th>
       <th>Pressão arterial</th>
@@ -19,7 +19,7 @@
   <tbody>
     <% @records.each do |record| %>
       <tr>
-        <td><%= record.user_id %></td>
+        <td><%= record.user.name %></td>
         <td><%= record.symptom %></td>
         <td> <img src="record.exams " /></td>
         <td><%= record.bloodPress %></td>

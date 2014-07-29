@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  def set_locale
+    I18n.locale = "pt-BR"
+  end
+ 
   protected
 
   def configure_permitted_parameters

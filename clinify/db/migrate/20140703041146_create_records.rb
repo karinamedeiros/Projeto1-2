@@ -7,7 +7,7 @@ class CreateRecords < ActiveRecord::Migration
       t.string :heartBeat
       t.string :history
       t.string :observation
-      t.integer :user_id
+      t.belongs_to :user
 
       t.timestamps
     end

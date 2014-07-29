@@ -1,17 +1,17 @@
 Clinify::Application.routes.draw do
   
   devise_for :users
-
-  devise_for :records
+  resources :users
+  resources :records
 
   root  'clinify_static_pages#home'
   match '/help',    to: 'clinify_static_pages#help',    via: 'get'
   match '/about',   to: 'clinify_static_pages#about',   via: 'get'
   match '/login',   to: 'clinify_static_pages#login', via: 'get'
 
-  resources :records
+  
 
-  resources :users
+
 
   
 
