@@ -1,0 +1,41 @@
+<h1>Compromissos</h1>
+
+<div id="calendar"></div>
+
+<script>
+ $('#calendar').fullCalendar(); 
+</script>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th>Inicio</th>
+      <th>Fim</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.nome %></td>
+        <td><%= event.descricao %></td>
+        <td><%= event.inicio %></td>
+        <td><%= event.fim %></td>
+        <td><%= link_to 'Mostrar', event %></td>
+        <td><%= link_to 'Editar', edit_event_path(event) %></td>
+        <td><%= link_to 'Apagar', event, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<br/>
+
+<%= link_to 'Novo compromisso', new_event_path %>
