@@ -8,12 +8,18 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = "pt-BR"
   end
- 
+
+
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = exception.message
+    redirect_to root_url
+  end 
+  
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :name, :phoneMobile, :phoneHome, 
-    	:address) }
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit:name, :cpf, :phoneHome, :phoneMobile, :address, :email, :login, 
+      :password, :password_confirmation, :role }
   end
 
 end

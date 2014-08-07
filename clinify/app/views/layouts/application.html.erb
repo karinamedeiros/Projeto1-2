@@ -10,6 +10,8 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
+    <%= flash[:error] %>
+    <%= flash[:notice] %>
     <div class="container">
       <%= yield %>
       <%= render 'layouts/user_widget' %>

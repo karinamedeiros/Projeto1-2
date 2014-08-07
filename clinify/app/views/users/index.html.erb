@@ -8,6 +8,7 @@
       <th>Telefone residencial</th>
       <th>Telefone celular</th>
       <th>Endereço</th>
+      <th>Tipo</th>
       <th></th>
       <th></th>
       <th></th>
@@ -23,6 +24,7 @@
         <td><%= user.phoneMobile %></td>
         <td><%= user.address %></td>
         <td><%= user.email %></td>
+        <td><%= user.role %></td>
         <td><%= link_to 'Mostrar', user %></td>
         <td><%= link_to 'Editar', edit_user_path(user) %></td>
         <td><%= link_to 'Excluir', user, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
