@@ -1,10 +1,17 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-
 	has_one :record
-	after_save :create_record #creates profile at user registration
-	devise :database_authenticatable, :registerable,
+	after_save :create_record #creates record at user registration
+
+	devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable   
 
+  validates :name, presence: true
+  validates :cpf, length: {maximum: 14}
+  validates_uniqueness_of :email
+
+  ROLES = %i[admin patient]
+
+  def admin?
+  	return role == 'admin'
+  end
 end
