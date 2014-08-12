@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
 	has_one :record
+
+  accepts_nested_attributes_for :record
+
 	after_save :create_record #creates record at user registration
 
 	devise :database_authenticatable,

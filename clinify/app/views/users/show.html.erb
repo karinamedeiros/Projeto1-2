@@ -1,7 +1,7 @@
 <p>
-  <strong>Name:</strong>
+  strong>Name:</strong>
   <%= @user.name %>
-</p>
+</p><
 
 <p>
   <strong>Cpf:</strong>
@@ -28,5 +28,6 @@
   <%= @user.email %>
 </p>
 
+<%= link_to 'Ficha médica', new_record_path %>
 <%= link_to 'Editar', edit_user_path(@user) %> |
 <%= link_to 'Voltar', users_path %>

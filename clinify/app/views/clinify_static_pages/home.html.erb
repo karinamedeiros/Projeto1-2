@@ -6,4 +6,12 @@
   </h2>
 </div>
 
+<%- if can? :manage, Event %>
+  <%= link_to 'Compromissos', events_path %> 
+  | <%= link_to 'Pacientes', users_path %>
+  | <%= link_to 'Novo paciente', new_user_path %>
+
+<% end -%>
+
+
 <%= link_to image_tag("kefisio.jpg", alt: "Kefisio") %>
