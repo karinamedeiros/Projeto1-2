@@ -15,3 +15,50 @@
 
 
 <%= link_to image_tag("kefisio.jpg", alt: "Kefisio") %>
+
+<%- if can? :manage, Event %>
+  <center>
+
+  <% (Event.all).each do |event| %>
+      <% if((Time.now - 3.hours <= event.inicio) and ((Time.now + 21.hours >= event.inicio))) %>
+
+	  <h1>Compromissos Próximos</h1>
+
+	  <table>
+	  <thead>
+	    <tr>
+	      <th>Nome</th>
+	      <th>Descrição</th>
+	      <th>Inicio</th>
+	      <th>Fim</th>
+	      <th></th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+
+          <% break %>
+
+      <% end %>
+  <% end %>
+
+
+  <tbody>
+  <% (Event.all).each do |event| %>
+      <% if((Time.now - 3.hours <= event.inicio) and ((Time.now + 21.hours >= event.inicio))) %>
+	      <tr>
+		<td><%= event.nome %></td>
+		<td><%= event.descricao %></td>
+		<td><%= event.inicio %></td>
+		<td><%= event.fim %></td>
+		<td><%= link_to 'Editar', edit_event_path(event) %></td>
+		<td><%= link_to 'Apagar', event, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+	      </tr>
+       <% end %>
+  <% end %>
+  </tbody>
+  </table>
+
+  </center>
+<% end -%>
+
