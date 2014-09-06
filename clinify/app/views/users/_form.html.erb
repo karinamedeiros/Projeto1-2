@@ -1,7 +1,7 @@
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@user.errors.count, "erros") %> impediram do usuário ser salvo:</h2>
 
       <ul>
       <% @user.errors.full_messages.each do |msg| %>
@@ -13,49 +13,48 @@
   
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :Nome %><br>
+    <%= f.text_field :name, :autofocus => true %>
   </div>
 
   <div class="field">
-    <%= f.label :cpf %><br>
+    <%= f.label :CPF %><br>
     <%= f.text_field :cpf %>
   </div>
 
   <div class="field">
-    <%= f.label :phoneHome %><br>
+    <%= f.label :Telefone  %><br>
     <%= f.text_field :phoneHome %>
   </div>
 
   <div class="field">
-    <%= f.label :phoneMobile %><br>
+    <%= f.label :Celular %><br>
     <%= f.text_field :phoneMobile %>
   </div>
 
  <div class="field">
-    <%= f.label :address %><br>
+    <%= f.label :Endereço %><br>
     <%= f.text_field :address %>
   </div>
 
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, :autofocus => true %>
+    <%= f.label :Email %><br />
+    <%= f.email_field :email %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :Senha %><br />
     <%= f.password_field :password %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :Confirmação %><br />
     <%= f.password_field :password_confirmation %>
   </div>
   
-  
   <div class="field">
-    <%= f.label :role %><br>
+    <%= f.label :Tipo %><br>
     <%= f.collection_select :role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize} %>
   </div>
 

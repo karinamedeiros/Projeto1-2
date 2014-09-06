@@ -4,52 +4,49 @@
   <%= devise_error_messages! %>
   
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :Nome %><br>
+    <%= f.text_field :name , :autofocus => true %>
   </div>
 
   <div class="field">
-    <%= f.label :cpf %><br>
+    <%= f.label :CPF %><br>
     <%= f.text_field :cpf %>
   </div>
 
   <div class="field">
-    <%= f.label :phoneHome %><br>
+    <%= f.label :Telefone %><br>
     <%= f.text_field :phoneHome %>
   </div>
 
   <div class="field">
-    <%= f.label :phoneMobile %><br>
+    <%= f.label :Celular %><br>
     <%= f.text_field :phoneMobile %>
   </div>
 
  <div class="field">
-    <%= f.label :address %><br>
+    <%= f.label :Endereço %><br>
     <%= f.text_field :address %>
   </div>
 
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <div><%= f.label :Email %><br />
+    <%= f.email_field :email %> 
+  </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div><%= f.label :password %> <i>(Deixe em branco se não deseja alterar)</i><br />
+  <div><%= f.label :Senha %> <i>(Deixe em branco se não deseja alterar)</i><br />
   <%= f.password_field :password, :autocomplete => "off" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div><%= f.label :Confirmação %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :current_password %> <i>(Digite sua senha atual para confirmar as alterações)</i><br />
+  <div><%= f.label :Senha %> <i>(Digite sua senha atual para confirmar as alterações)</i><br />
   <%= f.password_field :current_password %></div>
 
   <div><%= f.submit "Atualizar" %></div>
 <% end %>
-
-<h1>Cancelar conta</h1>
-
-<p>Deseja cancelar a conta? <%= button_to "Cancelar conta", edit_user_registration_path(resource_name), :data => { :confirm => "Você tem certeza?" }, :method => :delete %></p>
 
 <%= link_to "Voltar", :back %>

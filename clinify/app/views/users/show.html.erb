@@ -1,25 +1,26 @@
+<h1> Dados pessoais </h1>
 <p>
-  strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @user.name %>
-</p><
+</p>
 
 <p>
-  <strong>Cpf:</strong>
+  <strong>CPF:</strong>
   <%= @user.cpf %>
 </p>
 
 <p>
-  <strong>Phonehome:</strong>
+  <strong>Telefone residencial:</strong>
   <%= @user.phoneHome %>
 </p>
 
 <p>
-  <strong>Phonemobile:</strong>
+  <strong>Telefone celular:</strong>
   <%= @user.phoneMobile %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>Endereço:</strong>
   <%= @user.address %>
 </p>
 
@@ -28,6 +29,6 @@
   <%= @user.email %>
 </p>
 
-<%= link_to 'Ficha médica', new_record_path %>
-<%= link_to 'Editar', edit_user_path(@user) %> |
+<h2> <%= link_to 'Ficha médica', record_path(current_user.record.id) %> </h2>
+
 <%= link_to 'Voltar', users_path %>

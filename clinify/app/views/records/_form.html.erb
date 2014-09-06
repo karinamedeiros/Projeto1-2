@@ -2,7 +2,7 @@
 
   <% if @record.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@record.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <h2><%= pluralize(@record.errors.count, "error") %> Ficha não salva:</h2>
 
       <ul>
       <% @record.errors.full_messages.each do |msg| %>
@@ -13,28 +13,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :symptom %><br>
+    <%= f.label :Sintomas %><br>
     <%= f.text_field :symptom %>
   </div>
   <div class="field">
-    <%= f.label :exams %><br>
+    <%= f.label :Exames %><br>
     <%= f.file_field :exams %>
   </div>
   
   <div class="field">
-    <%= f.label :bloodPress %><br>
+    <%= f.label :Pressão %><br>
     <%= f.text_field :bloodPress %>
   </div>
   <div class="field">
-    <%= f.label :heartBeat %><br>
+    <%= f.label :Batimentos %><br>
     <%= f.text_field :heartBeat %>
   </div>
   <div class="field">
-    <%= f.label :history %><br>
+    <%= f.label :Histórico %><br>
     <%= f.text_field :history %>
   </div>
   <div class="field">
-    <%= f.label :observation %><br>
+    <%= f.label :Observações %><br>
     <%= f.text_field :observation %>
   </div>
 

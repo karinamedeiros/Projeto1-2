@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Paciente</strong>
-  <%= @record.user.name %>
-</p>
-
-<p>
   <strong>Sintomas</strong>
   <%= @record.symptom %>
 </p>
@@ -36,9 +31,11 @@
   <%= @record.observation %>
 </p>
 
+<%= link_to 'Voltar', users_path %>
 
-<%= link_to 'Editar', edit_record_path(@record) %> 
+<% if can? :manage, Record  %>
+  <%= link_to 'Editar', edit_record_path(@record) %> 
+ <% end %> 
 
-<%- if can? :manage, Record %>
-  | <%= link_to 'Todos os registros', records_path %>
-<% end -%>
+
+

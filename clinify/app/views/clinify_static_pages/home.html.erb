@@ -1,4 +1,6 @@
-<div class="center hero-unit">
+<% unless user_signed_in? %>
+ 	<div class="hero-unit">
+
   <h1>Bem vindo a Kefisio! </h1>
 
   <h2>
@@ -6,18 +8,20 @@
   </h2>
 </div>
 
-<%- if can? :manage, Event %>
-  <%= link_to 'Compromissos', events_path %> 
-  | <%= link_to 'Pacientes', users_path %>
-  | <%= link_to 'Novo paciente', new_user_path %>
-
-<% end -%>
-
-
 <%= link_to image_tag("kefisio.jpg", alt: "Kefisio") %>
 
+<% end %>
+
 <%- if can? :manage, Event %>
-  <center>
+
+	<h2> <%= link_to 'Novo paciente', new_user_path %> </h2>
+ 	<h2> <%= link_to 'Pacientes ', users_path %> </h2>
+ 	<h2> <%= link_to 'Compromissos', events_path %> </h2>
+ 
+<% end -%>
+
+<% if can? :manage, Event %>
+  
 
   <% (Event.all).each do |event| %>
       <% if((Time.now - 3.hours <= event.inicio) and ((Time.now + 21.hours >= event.inicio))) %>
@@ -28,7 +32,7 @@
 	  <thead>
 	    <tr>
 	      <th>Nome</th>
-	      <th>Descrição</th>
+	      <th>Cliente</th>
 	      <th>Inicio</th>
 	      <th>Fim</th>
 	      <th></th>
@@ -59,6 +63,6 @@
   </tbody>
   </table>
 
-  </center>
+
 <% end -%>
 

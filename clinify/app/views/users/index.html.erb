@@ -3,12 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Nome completo</th>
-      <th>CPF</th>
-      <th>Telefone residencial</th>
-      <th>Telefone celular</th>
-      <th>Endereço</th>
-      <th>Tipo</th>
+      <th style="color:green;text-align:center" > Nome completo                              .   </th>
+      <th style="color:green;text-align:center" >CPF                                    .   </th>
+      <th style="color:green;text-align:center" >Tipo                                   .    </th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,14 +17,10 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.cpf %></td>
-        <td><%= user.phoneHome %></td>
-        <td><%= user.phoneMobile %></td>
-        <td><%= user.address %></td>
-        <td><%= user.email %></td>
         <td><%= user.role %></td>
-        <td><%= link_to 'Mostrar', user %></td>
-        <td><%= link_to 'Editar', edit_user_path(user) %></td>
-        <td><%= link_to 'Excluir', user, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+        <td><%= link_to ' [  Mostrar      ]', user %></td>
+        <td><%= link_to ' [  Editar       ] ' , edit_user_path(user) %></td>
+        <td><%= link_to ' [  Excluir      ] ', user, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>

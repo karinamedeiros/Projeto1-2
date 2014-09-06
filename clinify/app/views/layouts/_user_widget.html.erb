@@ -1,7 +1,4 @@
 <% if user_signed_in? %>
-  <p>Bem vindo, <%= current_user.name %></p>
-  <%= link_to 'Ficha cadastral', record_path(current_user.record.id) , :class => 'navbar-link' %> |
-  <%= link_to 'Editar', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to 'Sair', destroy_user_session_path, :method => :delete %>
+  <h2>Bem vindo, <%= current_user.name %></h2>
 
 <% end %>

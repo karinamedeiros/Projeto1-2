@@ -12,19 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :nome %><br>
-    <%= f.text_field :nome %>
+    <%= f.label :Nome %><br>
+    <%= f.text_field :nome, :autofocus => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Cliente %><br>
+    <%= f.text_field :descricao %>
   </div>
   <div class="field">
-    <%= f.label :descricao %><br>
-    <%= f.text_area :descricao %>
-  </div>
-  <div class="field">
-    <%= f.label :inicio %><br>
+    <%= f.label :Inicio %><br>
     <%= f.datetime_select :inicio %>
   </div>
   <div class="field">
-    <%= f.label :fim %><br>
+    <%= f.label :Fim %><br>
     <%= f.datetime_select :fim %>
   </div>
 

@@ -7,14 +7,16 @@
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
    <%= render 'layouts/shim' %>
+   <%= render 'layouts/user_widget' %>
   </head>
   <body>
     <%= render 'layouts/header' %>
+
     <%= flash[:error] %>
     <%= flash[:notice] %>
+
     <div class="container">
       <%= yield %>
-      <%= render 'layouts/user_widget' %>
       <%= render 'layouts/footer' %>
     </div>
   </body>

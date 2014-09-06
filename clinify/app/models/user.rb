@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
 	has_one :record
+  has_many :event
 
   accepts_nested_attributes_for :record
+  accepts_nested_attributes_for :event
 
 	after_save :create_record #creates record at user registration
 

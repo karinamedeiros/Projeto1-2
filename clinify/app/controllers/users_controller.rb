@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     puts 'params = ' + params.to_s
     respond_to do |format|
       if @user.save
-        format.html { redirect_to User, notice: 'Usuário criado com sucesso.' }
+        format.html {redirect_to edit_record_path(@user.record)}
         format.json { render action: 'show', status: :created, location: User}
       else
         format.html { render action: 'new' }
