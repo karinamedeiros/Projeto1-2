@@ -1,30 +1,32 @@
-== README
+Este app foi desenvolvido para a disciplina de Projeto em Computação I, para a clínica de fisioterapia Kefisio, 
+localizada em Campina Grande - Paraíba.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+O aplicativo foi criado com as seguintes configurações:
 
 * Ruby version
 
+ruby: 2.0.0
+rails 4
+
 * System dependencies
+
+Bootstrap 
+Cancancan
+Full calendar
+Devise
+Heroku
 
 * Configuration
 
+
 * Database creation
 
-* Database initialization
+Sqlite
+
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+O aplicativo está disponível no Heroku, com link:
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
 
 # Ruby on Rails: Clinify 
