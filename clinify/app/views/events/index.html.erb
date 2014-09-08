@@ -1,3 +1,5 @@
+<center>
+
 <h1>Compromissos</h1>
 
 <div id="calendar"></div>
@@ -10,10 +12,10 @@
 <table>
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Descrição</th>
-      <th>Inicio</th>
-      <th>Fim</th>
+      <th style="color:green;text-align:center">Nome .</th>
+      <th style="color:green;text-align:center">Descrição .</th>
+      <th style="color:green;text-align:center">Inicio .</th>
+      <th style="color:green;text-align:center">Fim .</th>
       <th></th>
       <th></th>
       <th></th>
@@ -27,9 +29,9 @@
         <td><%= event.descricao %></td>
         <td><%= event.inicio %></td>
         <td><%= event.fim %></td>
-        <td><%= link_to 'Mostrar', event %></td>
-        <td><%= link_to 'Editar', edit_event_path(event) %></td>
-        <td><%= link_to 'Apagar', event, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+        <td><%= link_to '[ Mostrar ]', event %></td>
+        <td><%= link_to '[ Editar ]', edit_event_path(event) %></td>
+        <td><%= link_to '[ Apagar ]', event, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -37,4 +39,4 @@
 
 <br/>
 
-
+</center>

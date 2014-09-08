@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :record
   accepts_nested_attributes_for :event
 
-	after_save :create_record #creates record at user registration
+	after_create :create_record #creates record at user registration
 
 	devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable   
