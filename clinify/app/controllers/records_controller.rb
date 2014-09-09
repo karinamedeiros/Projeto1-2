@@ -20,7 +20,7 @@ class RecordsController < ApplicationController
 
   # GET /records/1/edit
   def edit
-     @record = Record.find_by user_id: current_user.id
+     @record = Record.find_by user_id: params[:user_id]
      @attributes = Record.attribute_names - %w(id user_id created_at updated_at)
   end
 

@@ -31,7 +31,7 @@
   <%= @user.email %>
 </p>
 
-<h2> <%= link_to 'Ficha médica', record_path(current_user.record.id) %> </h2>
+<h2> <%= link_to 'Ficha médica', record_path(@user.record.id) %> </h2>
 
 <%= link_to '[ Voltar ]', users_path %>
 

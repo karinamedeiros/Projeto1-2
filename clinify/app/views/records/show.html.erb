@@ -37,7 +37,7 @@
 <%= link_to '[ Voltar ]', users_path %>
 
 <% if can? :manage, Record  %>
-  <%= link_to '[ Editar ]', edit_record_path(@record) %> 
+  <%= link_to '[ Editar ]', edit_record_path(@record, params.merge(user_id:@record.user_id)) %> 
  <% end %> 
 
 

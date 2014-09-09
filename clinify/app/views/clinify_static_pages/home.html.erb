@@ -72,6 +72,7 @@
 
    <% if current_user.role == "patient" %>
         <% @record = Record.where(user_id: current_user.id).first %>
+
         <h2>Sua ficha na Kefisio</h2>
 
 	<p>
